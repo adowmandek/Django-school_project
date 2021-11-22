@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <h1>codeHive Trainers List</h1>
+    <style>
+        body{
+            background-color: rgb(194, 160, 225);
+            /* color: rgb(213, 21, 21); */
+        }
+
+        table, th, td {
+  border: 1px solid black;
+}
+table {
+  width: 70%;
+  text-align: center;
+}
+
+
+
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            text-align: center;
+            color: #260818;
+        }
+        table {
+            text-align: center;
+            font-size: 20px;
+            width: 85%;
+            margin: auto;
+            margin-top: 40px;
+        }
+        table tr :nth-child(odd) {
+            background: #C0AEC4;
+        }
+        table tr :nth-child(even) {
+            background: #7389a9;
+        }
+        th,
+        td {
+            padding: 8px;
+            opacity: 0.9;
+        }
+        #row {
+            background-color: #bb1f73;
+            color: #A0DED3;
+        }
+        th {
+            background-color: #A0DED3;
+        }
+    </style>
+</body>
+</html>
+</html>
+
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th id="row">first Name</th>
+        <th id="row">last Name</th>
+        <th id="row">gender</th>
+        <th id="row">id Number</th>
+        <th id="row">trainer cv</th>
+        <th id="row">profession</th>
+        <th id="row">Trainer</th>
+        <th id="row">Age</th>
+        <th id="row">email</th>
+        <th id="row">phoneNumber</th>
+        <th id="row">unit name</th>
+        <th id="row">Bank account</th>
+        <th>Edit</th>
+        <th>profile</th>
+        <th>Delete</th>
+    </tr>
+
+{%for trainer in trainers%}
+<tr>
+    <td>{{ trainer.first_name}}</td>
+    <td>{{ trainer.last_name}}</td>
+    <td>{{ trainer.gender}}</td>
+    <td>{{trainer.phoneNumber}}</td>
+    <td>{{trainer.email}}</td>
+    <th>{{trainer.Bank_account}}</th>
+    <th>{{trainer.unit_name}}</th>
+    <th>{{trainer.profession}}</th>
+    <th>{{trainer.trainer_cv}}</th>
+    <th>{{trainer.age}}</th>
+    <td><a href="{% url 'edit_trainer 'id=trainer.id% }">edit</a></td>
+    <td><a href="{% url 'trainer_profile 'id=trainer.id% }">profile</a></td>
+    <td><a href="{% url 'delete_trainer 'id=trainer.id% }">delete</a></td>
+</tr>
+{%endfor%}
+</table>
+
+
+</body>
+</html>
+
+
+
+
+

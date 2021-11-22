@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <h1>codeHive Calendar List</h1>
+    <style>
+        body{
+            background-color: rgb(210, 200, 220);
+            /* color: rgb(213, 21, 21); */
+        }
+
+        table, th, td {
+  border: 1px solid black;
+}
+table {
+  width: 70%;
+  text-align: center;
+}
+
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            text-align: center;
+            color: #260818;
+        }
+        table {
+            text-align: center;
+            font-size: 20px;
+            width: 85%;
+            margin: auto;
+            margin-top: 40px;
+        }
+        table tr :nth-child(odd) {
+            background: #C0AEC4;
+        }
+        table tr :nth-child(even) {
+            background: #5a6c85;
+        }
+        th,
+        td {
+            padding: 8px;
+            opacity: 0.9;
+        }
+        #row {
+            background-color: #ac276e;
+            color: #A0DED3;
+        }
+        th {
+            background-color: #A0DED3;
+        }
+    </style>
+</body>
+</html>
+</html>
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th id="row">Event Venue</th>
+        <th id="row">Event Duration</th>
+        <th id="row">Event Goal</th>
+        <th id="row">Event Date</th>
+        <th id="row">Event Signed</th>
+        <th id="row">Event Atendee</th>
+        <th id="row">Event Name</th>
+        <th>Edit</th>
+        <th>profile</th>
+        <th>Delete</th>
+    </tr>
+    {%for calender in calenders%}
+<tr>A
+    <td>{{calender.Event_venue}}</td>
+    <td>{{calender.Event_duration}}</td>
+    <td>{{calender.Event_goal}}</td>
+    <td>{{calender.Event_date}}</td>
+    <td>{{calender.Event_signed}}</td>
+    <th>{{calender.Event_atendee}}</th>
+    <th>{{calender.vent_name}}</th>
+    <td><a href="{% url 'edit_calender 'id=student.id% }">edit</a></td>
+    <td><a href="{% url 'calender_profile 'id=calender.id% }">profile</a></td>
+    <td><a href="{% url 'delete_calender 'id=calender.id% }">delete</a></td>
+</tr>
+{%endfor%}
+</table>
+</body>
+</html>
+
+
+
+

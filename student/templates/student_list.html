@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <h1>codeHive students List</h1>
+    <style>
+        body{
+            background-color: rgb(194, 160, 225);
+            /* color: rgb(213, 21, 21); */
+        }
+
+        table, th, td {
+  border: 1px solid black;
+}
+table {
+  width: 70%;
+  text-align: center;
+}
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            text-align: center;
+            color: #260818;
+        }
+        table {
+            text-align: center;
+            font-size: 20px;
+            width: 85%;
+            margin: auto;
+            margin-top: 40px;
+        }
+        table tr :nth-child(odd) {
+            background: #C0AEC4;
+        }
+        table tr :nth-child(even) {
+            background: #89a1c2;
+        }
+        th,
+        td {
+            padding: 8px;
+            opacity: 0.9;
+        }
+        #row {
+            background-color: #dd3d93;
+            color: #A0DED3;
+        }
+        th {
+            background-color: #A0DED3;
+        }
+    </style>
+</body>
+</html>
+</html>
+
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th id="row">first Name</th>
+        <th id="row">Last Name</th>
+        <th id="row">age</th>
+        <th id="row">phoneNumber</th>
+        <th id="row">email</th>
+        <th id="row">class name</th>
+        <th id="row">Room number</th>
+        <th id="row">id</th>
+        <th id="row">date of birth</th>
+        <th id="row">registration</th>
+        <th id="row">mentors name</th>
+        <th id="row">Big sister</th>
+        <th>Edit</th>
+        <th>profile</th>
+        <th>Delete</th>
+
+
+
+    </tr>
+
+{%for student in students%}
+<tr>
+    <td>{{ student.first_name}}</td>
+    <td>{{ student.last_name}}</td>
+    <td>{{ student.age}}</td>
+    <td>{{student.phoneNumber}}</td>
+    <td>{{student.email}}</td>
+    <th>{{student.class_name}}</th>
+    <th>{{student.room_number}}</th>
+    <th>{{student.id}}</th>
+    <th>{{student.date_of_birth}}</th>
+    <th>{{student.registration}}</th>
+    <th>{{student.mentors_name}}</th>
+    <th>{{student.Big_sister}}</th>
+    <td><a href="{% url 'edit_student 'id=student.id% }">edit</a></td>
+    <td><a href="{% url 'student_profile 'id=student.id% }">profile</a></td>
+    <td><a href="{% url 'delete_student 'id=student.id% }">delete</a></td>
+</tr>
+{%endfor%}
+</table>
+
+
+</body>
+</html>
